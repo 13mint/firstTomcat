@@ -6,9 +6,21 @@ import javax.persistence.*;
 @Table(name="cars")
 public class Cars {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "model")
     private String model;
+
+    @Column(name = "color")
     private String color;
 
+    public Cars(){
+
+    }
+
+    public Cars(String model, String color) {
+        this.model = model;
+        this.color = color;
+    }
 }
