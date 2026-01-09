@@ -1,12 +1,10 @@
 package web.service;
 
+import org.springframework.stereotype.Service;
 import web.model.Cars;
 
 import java.util.List;
 
-public class CarService {
-    List<Cars> createdCars;
-    public List<Cars> getCreatedCars() {
-        return createdCars;
-    }
+public interface CarService {
+    List<Cars> createCars();
 }
